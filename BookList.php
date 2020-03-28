@@ -14,9 +14,6 @@ $books = $statement->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 
- 
-
-
 
 <?php require 'header.php'; ?>
 <?php require 'navbar.php'; ?>
@@ -51,9 +48,9 @@ $books = $statement->fetchAll(PDO::FETCH_OBJ);
             <td><?= $books->BookPrice; ?></td> 
             <td><?= $books->BookStatus; ?></td>   
             <td>
-              <a href="edit.php?id=<?= $books->booksname?>" class="btn btn-info">แก้ไข</a>
+              <a href="edit.php?id=<?= $books->BookName?>" class="btn btn-info">แก้ไข</a>
               <a onclick="return confirm('ต้องการลบหรือไม่?')" 
-              href="delete.php?id=<?= $books->booksname?>" class='btn btn-danger'>ลบ</a>
+              href="delete.php?id=<?= $books->BookName?>" class='btn btn-danger'>ลบ</a>
             </td>
           </tr>
         <?php endforeach; ?>

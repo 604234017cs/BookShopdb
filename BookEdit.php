@@ -16,7 +16,7 @@ if (isset($_POST['booksname']) && isset($_POST['booksname']) && isset($_POST['bo
     $statement = $connection->prepare($sql);
     if($statement->execute([$booksname,  $authorname, $categoryname, $publishername,$bookdescription, $bookprice, $bookstatus]))   {
         $message = 'แก้ไขข้อมูลหนังสือสำเร็จ';
-        header("Location: books/show.php");
+        header("Location: books/booklist.php");
     }
 }
 ?>
